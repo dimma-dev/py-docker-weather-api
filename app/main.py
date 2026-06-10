@@ -11,6 +11,7 @@ if not API_KEY:
 BASE_URL = "http://api.weatherapi.com/v1/current.json"
 CITY = "Paris"
 
+
 def get_weather() -> None:
     if not API_KEY:
         raise ValueError("API_KEY not found in environment variables")
@@ -20,7 +21,7 @@ def get_weather() -> None:
     data = response.json()
 
     current = data["current"]
-    print(f"Weather in {CITY}:")
+    print(f"Weather in {CITY}: ")
     print(f"Temperature: {current['temp_c']}°C")
     print(f"Condition: {current['condition']['text']}")
 
