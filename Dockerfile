@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY app/ /app/
 
-RUN pip install --no-cache-dir requests
+RUN pip install --no-cache-dir requests python-dotenv
 
 CMD ["python", "main.py"]
